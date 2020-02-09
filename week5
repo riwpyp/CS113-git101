@@ -1,0 +1,18 @@
+สัปดาห์ที่5
+1.function call และ stack frames
+  frame pointers - ไม่มีการเปลี่ยนค่าในช่วงการทำงานฟังก์ชั่น
+  stack poiters - การเปลี่ยนแปลงค่าช่วงฟังก์ชั่นทำงาน มีการ push และ pop ค่าใน stacks
+  การย้ายค่าstacksไปใส่ในframe pointers เพื่อการกำหนดจุดเริ่มต้นของ frame
+  คำสั่ง call จะ push ตำแหน่งของ return address ลงใน stack
+  คำสั่ง ret ทำการ pop ค่า return address ออกจาก stacks
+
+ส่วนประกอบของ stack frames
+เมื่อฟังก์ชั่นถูกเรียกใช้ stack frames จะถูกสร้างขึ้น
+   1 function : 1 stack frames เมื่อฟังก์ชั่นทำงานเสร็จ stack frames จะถูกทำลาย
+   return address เป็นตำแหน่งของคำสั่งที่จะถูกทำหลังฟังก์ชั่นทำงานเสร็จ
+
+2.สร้าง static library
+  ar cr libfuc.a func.o
+3.สร้าง shared library
+  gcc -shared -o libfunc.แล้วแต่ชนิดคอม
+4.การเรียก shared library
