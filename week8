@@ -1,0 +1,8 @@
+สัปดาห์ที่8
+linked list คล้าย array แต่ยืดหยุ่นได้มากกว่า
+
+struct node
+{
+    int data;
+    struct node *next;
+};
